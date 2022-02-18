@@ -1,74 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-<div>
-<div class="header">
-<div class="logo"></div>
-<div class="slogan">Починим ваше авто на изи!!!</div>
-<div class="phones"></div>
-<div class="chatOnline"></div>
-</div>
-<div class="content"></div>
-<div class="footer"></div>
-</div>
-<style>
-@font-face {
-font-family: Pompadur; /* Гарнитура шрифта */
-src: url(123.ttf); /* Путь к файлу со шрифтом */
-}
-.header{
-border:1px solid black;
-height:100px ;
-background-color:red ;
+    <div class="header-top">
+        <div class="logo"></div>
 
-}
-.header div{
-float:left;
-}
-.content{
-border:1px solid black;
-height:600px ;
-background-color:green ;
-}
-.footer{
-border:1px solid black;
-height:200px;
-background-color: blue;
-}
-.logo{
-border:1px solid black;
-height:100px ;
-min-width:150px ;
-background:url("logo.jpg") 100% 100% no-repeat ;
-background-size: cover ;
-}
-.slogan{
-border:1px solid black;
-height:100px ;
-min-width:450px ;
-background-color:rgb(0, 255, 34) ;
-font-size:20pt;
-font-family:Pompadur ;
-}
-.phones{
-border:1px solid black;
-height:100px ;
-min-width:250px ;
-background-color:rgb(148, 120, 120) ;
-}
-.chatOnline{
-border:1px solid black;
-height:100px ;
-min-width:150px ;
-background-color:rgb(166, 255, 0) ;
+    </div>
+    <div class="header-bottom-large">
+        <div class="padding-div">   
+            &nbsp;
+        </div>
+        <div>   
+            Главная 
+        </div>
+        <div>
+            Новости
+        </div>
+        <div>
+            Магазин
+        </div>
+        <div>
+            Контакты
+        </div>
+        <div>
+            О нас
+        </div>
+    </div>
+    <div class="header-bottom-small">
+            <div class="menu">
+                <a class="menu-triger" href="#"></a>
+                <div class="menu-popup">
+                    <a class="menu-close" href="#"></a>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Услуги</a></li>		
+                        <li><a href="#">Прайс-лист</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Гарантии</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>						
+                </div>
+            </div>
+        
+    </div>
+    <div class="content">
 
-}
-</style>
+    </div>
+    <div class="footer">
+
+    </div>
+    <style>
+    @font-face {
+        font-family: "samba-decorc"; 
+        src: url("samba-decorc.ttf") format("truetype"); 
+    }
+    @font-face {
+        font-family: "a_rewinderdemish"; 
+        src: url("a_rewinderdemish.ttf") format("truetype"); 
+    }
+    @font-face {
+        font-family: "3b6ce-protosans563"; 
+        src: url("3b6ce-protosans563.ttf") format("truetype"); 
+    }
+    
+    @media (max-width:800px){
+        .header-bottom-large {
+            display: none;
+        }
+        .header-bottom-small{
+            display: block;
+        }
+
+    }
+    @media (min-width:801px) and (max-width:1900px){
+        .header-bottom-large {
+            display: block;
+        }
+        .header-bottom-small{
+            display: none;
+        }
+    }
+        .header-top {
+            height: 100px;
+            width: 100%;
+            background-color: #9999FF;
+        }
+        .logo {
+            height: 97px;
+            width: 222px;
+            background: url(logo.png) 100% 100% no-repeat;
+            background-size: cover;
+        }
+        .header-bottom-large {
+            width: 100%;
+            height: 50px;
+            background-color: #6633CC;
+            font-family: 3b6ce-protosans563;
+            font-weight: bold;
+            color: #FF9966;
+            text-shadow: 1px 1px 1px #FFCC66, 0 0 1em #CC6633;
+            border-end-start-radius: 5px;
+            border-end-end-radius: 5px;
+        }
+        .header-bottom-large div{
+            float: left;
+            margin-left: 40px;
+            font-size: 27px;
+        }
+        .padding-div {
+            width: 80px;
+        }
+        .header-bottom-small {
+            height: 50px;
+            width: 100%;
+            background-color: #6633CC;
+        }
+        .content {
+            height: 500px;
+            width: 100%;
+            border:1px solid black;
+        }
+        .footer {
+            height: 200px;
+            width: 100%;
+            border:1px solid black;
+        }
+    </style>
 </body>
 </html>
